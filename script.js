@@ -73,10 +73,6 @@ function gameRun(){
         
         noCursor();
         
-        hero.x = mouseX;
-        hero.y = mouseY;
-        hero.show();
-        
         for(let c = 0; c < circles.length; c++){
             circles[c].x += circles[c].xinc;
             circles[c].y += circles[c].yinc;
@@ -108,6 +104,10 @@ function gameRun(){
                 circles[c].renew();
             }
         }
+
+        hero.x = mouseX;
+        hero.y = mouseY;
+        hero.show();
     }
 }
 
